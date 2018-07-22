@@ -1,7 +1,8 @@
 <mat-toolbar color="primary">
-    <span>{{title}}</span>
-  </mat-toolbar>
-  <div class="departmentContainer" *ngFor="let department of departments">
+  <span>{{title}}</span>
+</mat-toolbar>
+<div class="departmentContainer">
+  <div *ngFor="let department of departments">
     <app-department [department]=department></app-department>
   </div>
-
+</div>

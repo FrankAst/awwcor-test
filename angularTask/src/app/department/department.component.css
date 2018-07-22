@@ -1,3 +1,20 @@
 .departmentCard {
+    display: grid;
+    grid-template-columns: 250px;
+    grid-template-rows: 1fr 2fr 1fr;
     max-width: 250px;
+    overflow-wrap: break-word;
+    height: 150px;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .description {
+    overflow: auto;
+    max-height: inherit;
   }

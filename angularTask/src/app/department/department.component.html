@@ -1,8 +1,8 @@
 <mat-card class="departmentCard">
-   <mat-card-title>{{department.name}}</mat-card-title>
-<mat-card-subtitle>{{department.description}}</mat-card-subtitle>
-<mat-card-footer>
-    <button mat-button>VIEW EMPLOYEES</button>
-    <button mat-button>DELETE</button>
-</mat-card-footer>
+    <div class="header">
+        <mat-card-title>{{department.name}}</mat-card-title>
+        <mat-icon svgIcon="delete"></mat-icon> 
+    </div>  
+    <mat-card-subtitle class="description">{{department.description}}</mat-card-subtitle>
+    <button mat-raised-button color="primary">VIEW EMPLOYEES</button>
 </mat-card>
