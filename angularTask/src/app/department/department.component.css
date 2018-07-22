@@ -18,3 +18,8 @@
     overflow: auto;
     max-height: inherit;
   }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
