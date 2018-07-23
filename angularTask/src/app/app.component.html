@@ -1,5 +1,6 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" class="header">
   <span>{{title}}</span>
+  <button mat-mini-fab color="primary" (click)="openDialog()">+</button>
 </mat-toolbar>
 <div class="departmentContainer">
   <div *ngFor="let department of departments">
