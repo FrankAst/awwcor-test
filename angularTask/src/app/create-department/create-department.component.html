@@ -1,11 +1,14 @@
-<h1 mat-dialog-title>Hi {{data.name}}</h1>
-<div mat-dialog-content>
-  <p>What's your favorite animal?</p>
-  <!-- <mat-form-field> -->
-  <!-- <input matInput [(ngModel)]="data.animal"> -->
-  <!-- </mat-form-field> --> 
-</div>
-<div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
-</div>
+  <h1 mat-dialog-title>Create the new department</h1>
+  <div mat-dialog-content>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Name" [(ngModel)]="localData.name">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Description" [(ngModel)]="localData.description">
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button [mat-dialog-close]="localData" cdkFocusInitial>Create</button>
+    <button mat-button (click)="onCancel()">Cancel</button>
+  </div>
+

@@ -20,13 +20,11 @@ export class DepartmentService {
     return this.http.get<Department>(uri + '/' + id);
   }
 
-  create(user: Department) {
-    const uri = '';
-    return this.http.post(uri, user);
+  create(department: Department) {
+    return this.http.post<Department>(this.baseUri + '/users/departments/', department);
   }
 
   delete(id: number) {
-    const uri = '';
-    return this.http.delete(uri);
+    return this.http.delete<Department>(this.baseUri + '/users/departments/' + id);
   }
 }

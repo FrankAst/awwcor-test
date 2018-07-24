@@ -11,7 +11,11 @@ import { DepartmentService } from './department.service';
 export class DepartmentComponent implements OnInit {
   @Input()
   department: Department;
-  constructor() {}
+  constructor(private departmentService: DepartmentService) {}
+  delete = (id: number): void => {
+    this.departmentService.delete(id).subscribe((deleted: Department) => {
+      console.log(deleted);
+    });
+  }
   ngOnInit() {}
-
 }

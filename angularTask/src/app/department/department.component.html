@@ -1,7 +1,7 @@
 <mat-card class="departmentCard">
     <div class="header">
         <mat-card-title>{{department.name}}</mat-card-title>
-        <button mat-icon-button class="iconBtn">
+        <button mat-icon-button class="iconBtn" (click)="delete(department.id)">
             <mat-icon class="icon" svgIcon="delete"></mat-icon>
         </button>
     </div>  

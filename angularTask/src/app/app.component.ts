@@ -15,22 +15,23 @@ export class AppComponent implements OnInit {
   constructor(private departmentService: DepartmentService, public dialog: MatDialog) {}
 
   openDialog(): void {
-    console.log('aallalaalal');
     const dialogRef = this.dialog.open(CreateDepartmentComponent, {
-      width: '250px',
-      data: {name: 'sdcsdc'}
+      width: '400px',
+      height: '270px'
     });
-
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      console.log(result);
+      this.departmentService.create(result).subscribe((newDepartment: Department) => {
+        this.departments.push(newDepartment);
+        this.departments.sort((a, b) => b.id - a.id);
+      });
     });
   }
+
   ngOnInit() {
     this.departmentService
     .getAll()
     .subscribe((data: Department[]) => {
-      this.departments = data;
-        });
-      }
+      this.departments = data.sort((a, b) => b.id - a.id);
+    });
+  }
 }
